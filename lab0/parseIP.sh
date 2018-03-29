@@ -7,6 +7,8 @@ then
 elif [ $# -eq 1 ]
 then
     egrep -o "([0-9]{1,3}\.){3}[0-9]{1,3}" $1 > ipList.txt
+    echo Parsed out IPs, saving into "ipList.txt ...."
 else
     egrep -o "([0-9]{1,3}\.){3}[0-9]{1,3}" /dev/stdin > ipList.txt
+    echo Parsed out IPs, saving into "ipList.txt ...."
 fi
